@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis of Online Social Reviews - Case Study</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav style="padding: 2rem 2rem 0; max-width: 1200px; margin: 0 auto;">
+        <a href="../../index.html" class="btn-read-more" style="text-decoration: none;">
+            <span class="arrow" style="display: inline-block; transform: rotate(180deg); margin-right: 0.5rem;">→</span> Back to Portfolio
+        </a>
+    </nav>
+    <main class="main-content" style="max-width: 900px; margin: 2rem auto; background: var(--bg-color); border-radius: var(--border-radius-lg); border: 1px solid var(--border-color); box-shadow: 0 25px 50px rgba(0,0,0,0.5); overflow: hidden;">
+        <div class="modal-header">
+            <div class="modal-hero">
+                <img src="sentiment-hero.png" alt="Sentiment Analysis" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="hero-text">
+                    <h1 class="modal-title">Sentiment Analysis of Online Social Reviews</h1>
+                    <p class="modal-oneliner">A comprehensive data pipeline—from scraping raw social media data to visualizing emotional insights.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-body" style="padding-top: 3rem;">
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <span class="label">Environment</span>
+                    <span class="value">Google Colab (GPU/TPU)</span>
+                </div>
+                <div class="overview-item">
+                    <span class="label">Tech Stack</span>
+                    <span class="value tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Matplotlib/Seaborn</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">BERT</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="case-section">
+                <h2><span class="highlight">01.</span> Data Collection & Cleaning</h2>
+                <p>Cleaned raw social media data by removing stop-words, URLs, and special characters, and performing lemmatization to improve model accuracy. This crucial step ensured a high-quality dataset from otherwise "noisy" social media text.</p>
+            </div>
+
+            <div class="case-section">
+                <h2><span class="highlight">02.</span> Feature Engineering</h2>
+                <p>Utilized TF-IDF Vectorization and Word Embeddings (Word2Vec) to transform unstructured reviews into high-dimensional feature vectors, turning text into meaningful numbers for the machine learning algorithms.</p>
+            </div>
+
+            <div class="case-section">
+                <h2><span class="highlight">03.</span> Model Selection</h2>
+                <p>Trained and evaluated multiple models, including Naive Bayes, SVM, and BERT. Achieved a peak F1-score of <strong>[X]%</strong> using a fine-tuned BERT architecture.</p>
+            </div>
+
+            <div class="case-section">
+                <h2><span class="highlight">04.</span> Insights & Visualization</h2>
+                <p>Developed sentiment distribution charts to identify key areas of customer dissatisfaction in real-time. This what the data actually revealed, giving actionable insights.</p>
+                <div class="feature-list">
+                    <div class="feature">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-text">
+                            <h4>Confusion Matrix</h4>
+                            <p>A heat map showing how many "Positive," "Negative," and "Neutral" reviews the model predicted correctly.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">☁️</div>
+                        <div class="feature-text">
+                            <h4>Word Clouds</h4>
+                            <p>A visual representation of the most common words found in "Negative" vs. "Positive" reviews.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visual Placeholders: User can add their colab images here -->
+                <div class="visuals-grid">
+                    <div class="visual-placeholder">
+                        <div>Add Confusion Matrix Image Here<br><span>(e.g., &lt;img src="confusion-matrix.png" alt="Confusion Matrix" style="width:100%; border-radius:8px;"&gt;)</span></div>
+                    </div>
+                    <div class="visual-placeholder">
+                        <div>Add Word Cloud Image Here<br><span>(e.g., &lt;img src="word-cloud.png" alt="Word Cloud" style="width:100%; border-radius:8px;"&gt;)</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-section challenge-section">
+                <h2><span class="highlight">05.</span> Research Context</h2>
+                <div class="challenge-card">
+                    <div class="challenge-col">
+                        <h4>Industry Alignment</h4>
+                        <p>To show alignment with current industry standards, this project leverages concepts from modern <strong>Multimodal Sentiment Analysis</strong>—looking at text, images, and audio together.</p>
+                    </div>
+                    <div class="challenge-col">
+                        <h4>Zero-Shot Classification</h4>
+                        <p>Explored the use of Large Language Models (LLMs) for zero-shot classification (Liu & Li, 2026; "Sentiment Analysis," 2025) to further expand the pipeline's capabilities without extensive retraining.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-section">
+                <h2><span class="highlight">06.</span> Code & Live Demo</h2>
+                <p>Review the Colab notebook to see the code running live.</p>
+                <div class="action-buttons">
+                    <a href="https://colab.research.google.com/" target="_blank" class="btn btn-secondary">
+                        Open in Colab
+                    </a>
+                </div>
+            </div>
+        
+            <div class="case-section">
+                <h2><span class="highlight">07.</span> Journal Publications</h2>
+                <p>Access the published research paper  IJIRT Journal <b>International Journal Of Innovative Research In Technology</b>.</p>
+                <div class="action-buttons">
+                    <a href="Picture2.jpg" target="_blank" class="btn btn-secondary">Certificate Image</a>
+                    <a href="IJIRT178126_PAPER.pdf" target="_blank" class="btn btn-secondary">Published Paper</a>
+                    <a href="https://www.ijirt.org"target="_blank" class="btn btn-secondary">IJIRT Website Link</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

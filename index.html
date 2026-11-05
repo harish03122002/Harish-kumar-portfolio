@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== SEO ===== -->
+    <title>S. Harish Kumar | Java Full Stack Developer &amp; UI/UX Designer</title>
+    <meta name="description"
+        content="Portfolio of S. Harish Kumar, an MCA graduate and aspiring Java Full Stack Developer specialising in Java, Spring Boot, Angular, MySQL, REST APIs and UI/UX design.">
+    <meta name="keywords"
+        content="S Harish Kumar, Java Full Stack Developer, Spring Boot, Angular, UI UX Designer, MCA, Chennai, Portfolio">
+    <meta name="author" content="S. Harish Kumar">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="S. Harish Kumar | Java Full Stack Developer &amp; UI/UX Designer">
+    <meta property="og:description"
+        content="Portfolio of S. Harish Kumar — MCA graduate specialising in Java, Spring Boot, Angular and modern UI/UX design.">
+    <meta property="og:image" content="assets/profile-photo.jpg">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <canvas id="bgCanvas" aria-hidden="true"></canvas>
+    <canvas id="motionCanvas" aria-hidden="true"></canvas>
+    <div class="aurora-bg" aria-hidden="true"></div>
+
+    <!-- Custom Cursor -->
+    <div id="cursorDot" class="cursor-dot" aria-hidden="true"></div>
+    <div id="cursorRing" class="cursor-ring" aria-hidden="true"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header>
+        <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+            <a href="#home" class="nav-logo" aria-label="S. Harish Kumar - Home">
+                <div class="logo-icon" aria-hidden="true">HK</div>
+                <div class="logo-text">
+                    <span class="name">S. HARISH KUMAR</span>
+                    <span class="role">Java Full Stack &amp; Designer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu"
+                aria-expanded="false" aria-controls="mobileDropdown">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Dropdown -->
+        <div class="mobile-dropdown" id="mobileDropdown" aria-hidden="true">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ===== HERO SECTION ===== -->
+        <section id="home" class="hero section" aria-labelledby="heroHeading">
+            <div class="hero-content">
+                <div class="hero-text intro-animate">
+                    <p class="hero-eyebrow" aria-label="Tagline">BUILD&nbsp;&bull;&nbsp;CREATE&nbsp;&bull;&nbsp;DESIGN</p>
+                    <h1 id="heroHeading" class="glitch-text" data-text="S. HARISH KUMAR">S. HARISH KUMAR</h1>
+                    <h2 class="hero-role">
+                        <span id="heroRoleText" class="accent-text typewriter-text"></span><span
+                            class="typewriter-cursor" aria-hidden="true">|</span>
+                    </h2>
+                    <p class="hero-desc">Building scalable web applications with Java, Spring Boot, Angular and
+                        modern UI/UX principles.</p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary" id="ctaViewProjects">View Projects</a>
+                        <a href="assets/resume.pdf" class="btn btn-secondary" id="ctaDownloadResume"
+                            target="_blank" rel="noopener" download>Download Resume</a>
+                        <a href="#contact" class="btn btn-outline" id="ctaContactMe">Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual intro-animate-delayed">
+                    <!-- ===== PREMIUM PROFILE VISUAL ===== -->
+                    <div class="profile-visual tilt-element" role="img"
+                        aria-label="S. Harish Kumar — Java Full Stack Developer and UI/UX Designer">
+
+                        <!-- Ambient glow behind the frame -->
+                        <div class="pv-glow" aria-hidden="true"></div>
+
+                        <!-- Outer decorative ring -->
+                        <div class="pv-orbit-ring" aria-hidden="true"></div>
+
+                        <!-- Subtle grid background -->
+                        <div class="pv-grid-bg" aria-hidden="true">
+                            <svg width="100%" height="100%" viewBox="0 0 300 300"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <!-- Grid lines -->
+                                <defs>
+                                    <pattern id="pvGrid" x="0" y="0" width="30" height="30"
+                                        patternUnits="userSpaceOnUse">
+                                        <path d="M 30 0 L 0 0 0 30" fill="none"
+                                            stroke="rgba(0,212,255,0.07)" stroke-width="0.5"/>
+                                    </pattern>
+                                    <radialGradient id="pvGridFade" cx="50%" cy="50%" r="50%">
+                                        <stop offset="30%" stop-color="white" stop-opacity="1"/>
+                                        <stop offset="100%" stop-color="white" stop-opacity="0"/>
+                                    </radialGradient>
+                                    <mask id="pvGridMask">
+                                        <rect width="300" height="300" fill="url(#pvGridFade)"/>
+                                    </mask>
+                                </defs>
+                                <rect width="300" height="300" fill="url(#pvGrid)" mask="url(#pvGridMask)"/>
+                                <!-- Diagonal accent lines -->
+                                <line x1="0" y1="300" x2="300" y2="0"
+                                    stroke="rgba(0,212,255,0.06)" stroke-width="0.8"/>
+                                <line x1="0" y1="200" x2="200" y2="0"
+                                    stroke="rgba(0,212,255,0.04)" stroke-width="0.6"/>
+                                <line x1="100" y1="300" x2="300" y2="100"
+                                    stroke="rgba(0,212,255,0.04)" stroke-width="0.6"/>
+                            </svg>
+                        </div>
+
+                        <!-- Profile image frame -->
+                        <div class="pv-frame">
+                            <!-- Inner dark border -->
+                            <div class="pv-frame-inner">
+                                <img
+                                    src="assets/profile-photo.jpg"
+                                    alt="S. Harish Kumar - Java Full Stack Developer"
+                                    class="pv-photo"
+                                    width="320" height="320"
+                                    loading="eager">
+                            </div>
+                            <!-- Accent glow ring overlay -->
+                            <div class="pv-frame-ring" aria-hidden="true"></div>
+                        </div>
+
+                        <!-- Tech badge: Java -->
+                        <div class="pv-badge pv-badge--java" aria-label="Java">
+                            <span class="pv-badge-icon" aria-hidden="true">☕</span>
+                            <span class="pv-badge-label">Java</span>
+                        </div>
+
+                        <!-- Tech badge: Spring Boot -->
+                        <div class="pv-badge pv-badge--spring" aria-label="Spring Boot">
+                            <span class="pv-badge-icon" aria-hidden="true">🌿</span>
+                            <span class="pv-badge-label">Spring Boot</span>
+                        </div>
+
+                        <!-- Tech badge: Angular -->
+                        <div class="pv-badge pv-badge--angular" aria-label="Angular">
+                            <span class="pv-badge-icon" aria-hidden="true">🅰️</span>
+                            <span class="pv-badge-label">Angular</span>
+                        </div>
+
+                        <!-- Tech badge: MySQL -->
+                        <div class="pv-badge pv-badge--mysql" aria-label="MySQL">
+                            <span class="pv-badge-icon" aria-hidden="true">🗄️</span>
+                            <span class="pv-badge-label">MySQL</span>
+                        </div>
+
+                        <!-- Tech badge: Figma -->
+                        <div class="pv-badge pv-badge--figma" aria-label="Figma">
+                            <span class="pv-badge-icon" aria-hidden="true">✏️</span>
+                            <span class="pv-badge-label">Figma</span>
+                        </div>
+
+                        <!-- Brand text removed — name/role/tagline live in hero-text only -->
+
+                    </div><!-- /profile-visual -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" class="section reveal" aria-labelledby="aboutHeading">
+            <div class="glass-panel about-panel">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 id="aboutHeading">About Me</h2>
+                        <p class="desc mt-4">
+                            I am an MCA graduate and aspiring Java Full Stack Developer with hands-on experience in
+                            web development, backend development, databases and UI/UX design. I enjoy building
+                            practical applications that combine reliable backend systems with clean and intuitive
+                            user experiences.
+                        </p>
+                        <p class="desc mt-2">
+                            My technical interests include Java, Spring Boot, Angular, REST APIs, MySQL, Node.js,
+                            microservices and modern web development. I also enjoy UI/UX design and creating
+                            user-focused digital experiences.
+                        </p>
+                        <p class="desc mt-2">
+                            I completed an internship as a <strong>Full Stack Developer (Angular with Java)</strong>
+                            at TVK Technologies, Chennai, working on real-world full-stack application development.
+                            My MCA project, <em>Smart Bike Traveler Companion</em>, has been published in the IJIRT
+                            international research journal.
+                        </p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item interactive-hover">
+                            <div class="highlight-icon" aria-hidden="true">☕</div>
+                            <h3>Java Backend</h3>
+                            <p>Spring Boot, REST APIs &amp; microservices</p>
+                        </div>
+                        <div class="highlight-item interactive-hover">
+                            <div class="highlight-icon" aria-hidden="true">🅰️</div>
+                            <h3>Angular Frontend</h3>
+                            <p>Responsive, component-driven interfaces</p>
+                        </div>
+                        <div class="highlight-item interactive-hover">
+                            <div class="highlight-icon" aria-hidden="true">✨</div>
+                            <h3>UI/UX Design</h3>
+                            <p>User-centered creative design with Figma</p>
+                        </div>
+                        <div class="highlight-item interactive-hover">
+                            <div class="highlight-icon" aria-hidden="true">🗄️</div>
+                            <h3>Database</h3>
+                            <p>MySQL design, queries &amp; data management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS SECTION ===== -->
+        <section id="skills" class="section reveal" aria-labelledby="skillsHeading">
+            <div class="section-header">
+                <h2 id="skillsHeading">Skills &amp; Expertise</h2>
+                <p class="subtitle">Technologies and tools I work with</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category glass-panel interactive-hover">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Core Java</span>
+                        <span class="tag">Java 8</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-panel interactive-hover">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-panel interactive-hover">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Angular</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-panel interactive-hover">
+                    <h3>Database &amp; Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Microsoft Azure</span>
+                        <span class="tag">Microservices</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-panel interactive-hover">
+                    <h3>Tools &amp; Design</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">UI/UX Design</span>
+                        <span class="tag">Artificial Intelligence (AI)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section id="projects" class="section reveal" aria-labelledby="projectsHeading">
+            <div class="section-header">
+                <h2 id="projectsHeading">Selected Projects</h2>
+                <p class="subtitle">A showcase of my full-stack and software development projects.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- FEATURED Project — Smart Bike Traveler Companion -->
+                <article class="project-card glass-panel tilt-card featured-card"
+                    aria-label="Featured project: Smart Bike Traveler Companion">
+                    <div class="featured-badge" aria-label="Featured project">&#11088; FEATURED PROJECT</div>
+                    <div class="project-image-container">
+                        <img src="PORTFOLIO (PRS)/Portfolio ( SBTC-PRO MAIN )/smart-bike-app.png"
+                            alt="Smart Bike Traveler Companion - real-time safety and travel platform for motorcycle riders"
+                            class="project-image" loading="lazy" width="600" height="220">
+                        <div class="project-overlay" aria-hidden="true">
+                            <span class="tag-floating">Full-Stack</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Bike Traveler Companion</h3>
+                        <p class="project-desc">A real-time safety and travel assistance web platform designed for
+                            motorcycle riders. Supports solo and group rides, trip tracking, map-based navigation,
+                            rider communication, ride history and emergency assistance.</p>
+                        <div class="project-features">
+                            <span class="feature-tag">Solo &amp; Group Riding</span>
+                            <span class="feature-tag">GPS Tracking</span>
+                            <span class="feature-tag">Emergency SOS</span>
+                            <span class="feature-tag">Group Chat</span>
+                            <span class="feature-tag">Map Navigation</span>
+                            <span class="feature-tag">Trip History</span>
+                            <span class="feature-tag">JWT Auth</span>
+                            <span class="feature-tag">Real-time Comms</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="tech-stack">Angular &bull; Node.js &bull; Express.js &bull; MySQL &bull; Socket.io &bull; Leaflet &bull; OpenStreetMap &bull; JWT &bull; OSRM</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="PORTFOLIO (PRS)/Portfolio ( SBTC-PRO MAIN )/index.html" target="_blank"
+                                rel="noopener" class="btn btn-primary btn-sm" id="sbtcViewDetails">View Details
+                                &#8594;</a>
+                            <span class="publication-badge">&#128196; IJIRT Published</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 1 — Electronic Shop Management System -->
+                <article class="project-card glass-panel tilt-card"
+                    aria-label="Project: Electronic Shop Management System">
+                    <div class="project-image-container">
+                        <img src="PORTFOLIO (PRS)/Portfolio ( ESYS-PRO UG MIN )/image.png"
+                            alt="Electronic Shop Management System - inventory and sales management application"
+                            class="project-image" loading="lazy" width="600" height="220">
+                        <div class="project-overlay" aria-hidden="true">
+                            <span class="tag-floating">Management System</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Electronic Shop Management System</h3>
+                        <p class="project-desc">A desktop application for automating electronic retail store
+                            operations — covering product management, inventory tracking, customer records,
+                            billing, invoicing and sales reporting with full CRUD database management.</p>
+                        <div class="project-features">
+                            <span class="feature-tag">Inventory Management</span>
+                            <span class="feature-tag">Billing &amp; Invoicing</span>
+                            <span class="feature-tag">Customer Records</span>
+                            <span class="feature-tag">CRUD Operations</span>
+                            <span class="feature-tag">Sales Reports</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="tech-stack">Python &bull; Tkinter &bull; MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="PORTFOLIO (PRS)/Portfolio ( ESYS-PRO UG MIN )/index.html" target="_blank"
+                                rel="noopener" class="btn btn-primary btn-sm" id="esysViewDetails">View Details
+                                &#8594;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 — Sentiment Analysis -->
+                <article class="project-card glass-panel tilt-card"
+                    aria-label="Project: Sentiment Analysis of Online Social Reviews">
+                    <div class="project-image-container">
+                        <img src="PORTFOLIO (PRS)/Portfolio ( AOPS-PRO MIN )/sentiment-hero.png"
+                            alt="Sentiment Analysis of Online Social Reviews - text analysis and NLP project"
+                            class="project-image" loading="lazy" width="600" height="220">
+                        <div class="project-overlay" aria-hidden="true">
+                            <span class="tag-floating">Analysis</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sentiment Analysis of Online Social Reviews</h3>
+                        <p class="project-desc">A text-analysis project focused on identifying sentiment in online
+                            reviews and classifying feedback into sentiment categories (Positive, Negative, Neutral)
+                            using machine learning models and NLP techniques.</p>
+                        <div class="project-features">
+                            <span class="feature-tag">Text Processing</span>
+                            <span class="feature-tag">Sentiment Classification</span>
+                            <span class="feature-tag">NLP / BERT</span>
+                            <span class="feature-tag">Data Visualisation</span>
+                            <span class="feature-tag">TF-IDF</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="tech-stack">Python &bull; Pandas &bull; scikit-learn &bull; BERT &bull; Matplotlib &bull; Seaborn</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="PORTFOLIO (PRS)/Portfolio ( AOPS-PRO MIN )/index.html" target="_blank"
+                                rel="noopener" class="btn btn-primary btn-sm" id="aopsViewDetails">View Details
+                                &#8594;</a>
+                            <span class="publication-badge">&#128196; IJIRT Published</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ===== RESUME SECTION ===== -->
+        <section id="resume" class="section reveal" aria-labelledby="resumeHeading">
+            <div class="section-header">
+                <h2 id="resumeHeading">Resume &amp; Experience</h2>
+                <p class="subtitle">My academic and professional journey.</p>
+            </div>
+
+            <!-- Resume download CTA -->
+            <div class="resume-cta glass-panel">
+                <div class="resume-cta-text">
+                    <span class="resume-cta-icon" aria-hidden="true">&#128196;</span>
+                    <div>
+                        <h3>Download My Resume</h3>
+                        <p class="desc">View or download my full CV as a PDF.</p>
+                    </div>
+                </div>
+                <div class="resume-cta-buttons">
+                    <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-secondary"
+                        id="btnViewResume">View Resume</a>
+                    <a href="assets/resume.pdf" download class="btn btn-primary" id="btnDownloadResume">Download
+                        Resume</a>
+                </div>
+            </div>
+
+            <div class="resume-grid">
+                <!-- Education & Experience column -->
+                <div class="resume-column">
+                    <h3 class="resume-title">&#127891; Education</h3>
+                    <div class="resume-item glass-panel interactive-hover">
+                        <h4>Master of Computer Applications (MCA)</h4>
+                        <p class="resume-meta">SRM Valliammai Engineering College, Kattankulathur &nbsp;|&nbsp;
+                            2024 – 2026</p>
+                        <p class="resume-desc">Specialised in full-stack web development, database management and
+                            software engineering. Graduated 2026.</p>
+                    </div>
+                    <div class="resume-item glass-panel interactive-hover">
+                        <h4>Bachelor of Computer Applications (BCA)</h4>
+                        <p class="resume-meta">Sriram College of Arts and Science &nbsp;|&nbsp; 2020 – 2023</p>
+                    </div>
+
+                    <h3 class="resume-title mt-8">&#128188; Internship &amp; Experience</h3>
+                    <div class="resume-item glass-panel interactive-hover">
+                        <h4>Full Stack Developer (Angular with Java) Intern</h4>
+                        <p class="resume-meta">TVK Technologies, Chennai &nbsp;|&nbsp; January 2026 – March 2026
+                        </p>
+                        <ul class="internship-list">
+                            <li>Developed responsive web application interfaces using <strong>Angular, HTML, CSS and
+                                    JavaScript</strong>.</li>
+                            <li>Worked on backend development using <strong>Java</strong> and implemented
+                                application logic and RESTful APIs.</li>
+                            <li>Integrated frontend Angular components with Java backend services.</li>
+                            <li>Worked with <strong>MySQL</strong> for database design, queries and data
+                                management.</li>
+                            <li>Participated in debugging, testing and resolving application issues during
+                                development.</li>
+                            <li>Collaborated with the development team to understand requirements and implement
+                                application features.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Certifications & Achievements column -->
+                <div class="resume-column">
+                    <h3 class="resume-title">&#127942; Achievements &amp; Certifications</h3>
+                    <div class="resume-item glass-panel interactive-hover">
+                        <h4>Full Stack Web Development Certification</h4>
+                        <p class="resume-meta">Completed comprehensive training in full-stack development.</p>
+                    </div>
+                    <div class="resume-item glass-panel interactive-hover">
+                        <h4>Java Programming Certification</h4>
+                        <p class="resume-meta">Certified in core and advanced Java programming concepts.</p>
+                    </div>
+                    <div class="resume-item glass-panel interactive-hover">
+                        <h4>UI/UX Design Training</h4>
+                        <p class="resume-meta">Hands-on experience with modern design principles and tools
+                            including Figma.</p>
+                    </div>
+                    <div class="resume-item glass-panel interactive-hover">
+                        <h4>IJIRT Journal Publication — Smart Bike Traveler Companion</h4>
+                        <p class="resume-meta">International Journal of Innovative Research In Technology
+                            (IJIRT) &nbsp;|&nbsp; 2025</p>
+                    </div>
+                    <div class="resume-item glass-panel interactive-hover">
+                        <h4>IJIRT Journal Publication — Sentiment Analysis of Online Social Reviews</h4>
+                        <p class="resume-meta">International Journal of Innovative Research In Technology
+                            (IJIRT)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section id="contact" class="section reveal" aria-labelledby="contactHeading">
+            <div class="contact-grid">
+                <!-- Contact info -->
+                <div class="contact-info">
+                    <h2 id="contactHeading">Get in Touch</h2>
+                    <p class="subtitle">Let's build something great together. Send me a message or connect
+                        online.</p>
+
+                    <div class="contact-details mt-8">
+                        <div class="contact-row">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:harishshankaran2002@gmail.com" class="contact-value link">
+                                &#128231; harishshankaran2002@gmail.com
+                            </a>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/harish-kumar-246791279" target="_blank"
+                                rel="noopener" class="contact-value link">
+                                &#128188; linkedin.com/in/harish-kumar-246791279
+                            </a>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-label">GitHub</span>
+                            <a href="https://github.com/harish03122002" target="_blank" rel="noopener"
+                                class="contact-value link">
+                                &#128187; github.com/harish03122002
+                            </a>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-label">Location</span>
+                            <span class="contact-value">&#128205; Chennai, Tamil Nadu, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Web3Forms) -->
+                <div class="contact-form-container glass-panel">
+                    <!--
+                        ACCESS KEY CONFIGURATION
+                        =================================================================
+                        Do NOT put your real key here in the HTML.
+                        Open app.js and set it in the W3F_CONFIG object at the top
+                        of Section 9 — search for:  W3F_ACCESS_KEY
+                        =================================================================
+                    -->
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <!-- Web3Forms hidden fields — key is injected by app.js -->
+                        <input type="hidden" id="w3fAccessKey" name="access_key" value="">
+                        <input type="hidden" name="subject" value="New Portfolio Contact — S. Harish Kumar">
+                        <input type="hidden" name="from_name" value="Harish Kumar Portfolio">
+                        <!-- Honeypot spam protection -->
+                        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1"
+                            aria-hidden="true">
+
+                        <div class="form-group">
+                            <label for="contactName">Name <span class="required" aria-hidden="true">*</span></label>
+                            <input type="text" id="contactName" name="name" required minlength="2"
+                                placeholder="John Doe" class="form-input" autocomplete="name"
+                                aria-required="true" aria-describedby="nameError">
+                            <span id="nameError" class="form-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email <span class="required" aria-hidden="true">*</span></label>
+                            <input type="email" id="contactEmail" name="email" required
+                                placeholder="john@example.com" class="form-input" autocomplete="email"
+                                aria-required="true" aria-describedby="emailError">
+                            <span id="emailError" class="form-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" name="subject_custom"
+                                placeholder="Job Opportunity / Project Collaboration / Query"
+                                class="form-input" autocomplete="off">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Message <span class="required" aria-hidden="true">*</span></label>
+                            <textarea id="contactMessage" name="message" rows="4" required minlength="10"
+                                placeholder="Tell me about the opportunity or project..."
+                                class="form-input" aria-required="true"
+                                aria-describedby="messageError"></textarea>
+                            <span id="messageError" class="form-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary w-full shadow-glow" id="submitBtn">
+                                Send Message
+                            </button>
+                        </div>
+
+                        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-icon" aria-hidden="true">HK</div>
+                <div>
+                    <p class="footer-name">S. Harish Kumar</p>
+                    <p class="footer-role-text">Java Full Stack Developer | UI/UX Designer</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/harish03122002" target="_blank" rel="noopener"
+                    aria-label="GitHub profile" class="footer-icon-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/harish-kumar-246791279" target="_blank" rel="noopener"
+                    aria-label="LinkedIn profile" class="footer-icon-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="mailto:harishshankaran2002@gmail.com" aria-label="Send email"
+                    class="footer-icon-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" aria-hidden="true">
+                        <path
+                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-copy">&copy; <span id="currentYear"></span> S. Harish Kumar. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

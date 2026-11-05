@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bike Traveler Companion - Case Study</title>
+    <link rel="icon" type="image/png" href="smart-bike-app.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav style="padding: 2rem 2rem 0; max-width: 1200px; margin: 0 auto;">
+        <a href="../../index.html" class="btn-read-more" style="text-decoration: none;">
+            <span class="arrow" style="display: inline-block; transform: rotate(180deg); margin-right: 0.5rem;">→</span> Back to Portfolio
+        </a>
+    </nav>
+
+    <main class="project-content" style="max-width: 900px; margin: 2rem auto; background: var(--bg-color); border-radius: var(--border-radius-lg); border: 1px solid var(--border-color); overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.5);">
+            
+            <div class="modal-header">
+                <div class="modal-hero">
+                    <img src="smart-bike-app.png" alt="Smart Bike Interface" class="hero-image">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-text">
+                        <h1 class="modal-title">Smart Bike Traveler Companion</h1>
+                        <p class="modal-oneliner">A real-time safety and travel assistance web platform for motorcycle riders — supporting solo and group rides, GPS tracking, emergency SOS and real-time communication.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <span class="label">Role</span>
+                        <span class="value">Lead Developer (Full Stack)</span>
+                    </div>
+                    <div class="overview-item">
+                        <span class="label">Tech Stack</span>
+                        <span class="value tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Socket.io</span>
+                            <span class="tag">Leaflet</span>
+                            <span class="tag">OpenStreetMap</span>
+                            <span class="tag">OSRM</span>
+                            <span class="tag">JWT</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h2><span class="highlight">01.</span> The Problem</h2>
+                    <p>Motorcyclists face significant safety challenges due to lack of real-time hazard warnings. Current navigation tools often lack integrated SOS and risk-assessment features, leaving riders vulnerable to unpredictable road conditions.</p>
+                </div>
+
+                <div class="case-section">
+                    <h2><span class="highlight">02.</span> The Solution</h2>
+                    <p>I architected a comprehensive safety and navigation platform focusing on real-time intelligence and rapid response.</p>
+                    <div class="feature-list">
+                        <div class="feature">
+                            <div class="feature-icon">📍</div>
+                            <div class="feature-text">
+                                <h4>GPS & Tracking</h4>
+                                <p>Implemented real-time geolocation tracking using Google Maps API for accurate route monitoring.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🧠</div>
+                            <div class="feature-text">
+                                <h4>AI Risk Assessment</h4>
+                                <p>Built an AI-driven module to analyze route safety, providing users with safer path alternatives dynamically.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-text">
+                                <h4>High Performance</h4>
+                                <p>Optimized Angular components to ensure the dashboard remains highly responsive even on low-end hardware in harsh environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-section challenge-section">
+                    <h2><span class="highlight">03.</span> Process & Challenges</h2>
+                    <div class="challenge-card">
+                        <div class="challenge-col">
+                            <h4>The Challenge</h4>
+                            <p>Working with limited resources (4GB RAM) meant I had to optimize my backend queries to prevent latency and ensure real-time data flow.</p>
+                        </div>
+                        <div class="challenge-col">
+                            <h4>The Solution</h4>
+                            <p>I refactored the database schema in MySQL to minimize join operations, significantly speeding up the dashboard load time and reducing memory footprint.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h2><span class="highlight">04.</span> Visuals & Links</h2>
+                    <p>Watch the development demo video of the project running in Visual Studio Code.</p>
+                    <div class="action-buttons">
+                        <button onclick="openModal('video-modal')" class="btn btn-secondary">Watch Demo Video</button>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h2><span class="highlight">05.</span> Journal Publications</h2>
+                    <p>Access the published research paper  IJIRT Journal <b>International Journal Of Innovative Research In Technology</b>.</p>
+                    <div class="action-buttons">
+                        <a href="Certificates_page-0001.jpg" target="_blank" class="btn btn-secondary">Certificate Image</a>
+                        <a href="IJIRT195008_PAPER.pdf" target="_blank" class="btn btn-secondary">Published Paper</a>
+                        <a href="https://www.ijirt.org"target="_blank" class="btn btn-secondary">IJIRT Website Link</a>
+                    </div>
+                </div>
+
+                <div class="lessons-learned">
+                    <p><strong>Lesson Learned:</strong> This project taught me the critical importance of prioritizing performance optimization for mobile-web environments, where every millisecond counts for user safety.</p>
+                </div>
+            </div>
+    </main>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-backdrop" onclick="closeModal('video-modal'); stopVideo()"></div>
+        <div class="modal-content video-content">
+            <button class="close-btn" onclick="closeModal('video-modal'); stopVideo()">&times;</button>
+            <div class="video-container">
+                <video id="demo-video" controls>
+                    <source src="Smart Bike Travel Companion project - Visual Studio Code Demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                const activeModal = document.querySelector('.modal.active');
+                if(activeModal) {
+                    activeModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                    stopVideo();
+                }
+            }
+        });
+
+        function stopVideo() {
+            const video = document.getElementById('demo-video');
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        }
+    </script>
+</body>
+</html>
